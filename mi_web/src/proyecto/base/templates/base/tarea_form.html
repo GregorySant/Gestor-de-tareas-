@@ -1,0 +1,20 @@
+{% extends 'base/principal.html' %}
+{% block content %}
+
+
+<div class="barra-superior">
+    <a href="{% url 'pendientes' %}">&#x21E4;</a>
+</div>
+<hr>
+
+<h1>Crear tarea</h1>
+
+
+<form method="post" action="" class="formato-1">
+    {% csrf_token %}
+    {{form.as_p}}
+
+    <input class="botonform" type="submit" value="Enviar">
+</form>
+
+{% endblock content %}

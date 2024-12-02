@@ -1,0 +1,17 @@
+{% extends 'base/principal.html' %}
+{% block content %}
+
+
+<div class="barra-superior" style="font-size: 42px;">
+    <a href="{% url 'pendientes' %}">&#x21E4;</a>
+</div>
+<hr>
+
+
+<form method="post">
+    {% csrf_token %}
+    <p>Vas a eliminar esta tarea: "{{tarea}}"</p>
+    <input class="botonform" type="submit" value="Eliminar">
+</form>
+
+{% endblock content %}

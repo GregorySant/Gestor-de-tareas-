@@ -1,0 +1,23 @@
+"""python -m venv (nombre del pro) -> crear entorno virtual 
+
+source (nombre del)/bin/activate  -> entorno virtual
+
+inastall django
+
+mkdir src
+
+dentro de src -> django-admin startproject (nombre del pro)
+
+cd (nombre del pro)
+
+python manage.py runserver
+
+python manage.py migrate
+
+python manage.py createsuperuser
+
+python manage.py startapp base
+
+
+deactivate -> desactivar entorno
+"""

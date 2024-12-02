@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Página de Pendientes</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Moderustic:wght@300..800&display=swap" rel="stylesheet">
+   
+    <style>
+        body {
+
+            background-color: #0d1616;
+            font-family: "Moderustic", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            padding-top: 60px;
+            margin: 100px ;
+            background-image: url("{% static 'img/login.svg' %}");
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+            
+            
+            
+        }
+        
+        .container{
+
+            max-width: 560px;
+            margin: auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1); /* Blanco con 80% de opacidad */
+            border-radius: 16px; /* Esquinas redondeadas */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Sombra para darle profundidad */
+            color: #fffdfd; /* Color de la fuente */
+        }
+        
+        #login {
+        padding: 30px; /* Espaciado interno para el formulario */
+        
+        }
+
+        #login label{
+        margin-bottom: 5px;
+        
+        }
+
+
+        a {
+            color: #5db325;; /* Color del enlace normal */
+            text-decoration: none; /* Sin subrayado */
+            font-size: 16px;
+        }
+        /* a:hover {
+            color: #ff0000;            Color al pasar el mouse sobre el enlace
+            text-decoration: underline;      Subrayado al pasar el mouse 
+        }
+
+        a:visited {
+            color: #8888ff;  Color del enlace visitado 
+        }
+
+        a:active {
+            color: #fdfdf6; Color del enlace cuando es clicado 
+        } */
+
+        .barra-superior{
+            display: flex;
+            justify-content: space-between;
+            color: #fffdfd;
+            padding: 10;
+            border-radius: 10px;
+            /* background: linear-gradient(); para crear un degradado */     
+        }
+
+        .barra-superior a{
+            font-size: 50px;
+        }
+        .envoltotio-tarea{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-top: 2px solid rgba(255, 255, 255, 0.1);
+
+        }
+        
+        .titulo-tarea{
+            display: flex;
+
+        }
+
+        .titulo-tarea a{
+            text-decoration: none;
+            color: #f3f6f8;
+            margin: 10px;
+
+        }
+      
+        .icono-tarea-completa{
+            height: 20px;
+            width: 20px;
+            background-color: rgb(105, 162, 105);
+            border-radius: 50px;
+
+        }
+
+        .icono-tarea-incompleta {
+            height: 20px;
+            width: 20px;
+            background-color: rgb(218 , 218, 218);
+            border-radius: 50px;
+            
+
+
+        }
+        #envoltorio-agregar-buscar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        
+        }
+
+        
+
+        #enlace-agregar{
+            font-size: 50px;
+            text-decoration: none;
+            color: #27a527;
+        }
+
+        
+        .formato-1 input[type="text"],
+        .formato-1 input[type="password"],
+        .formato-1 textarea {
+        border: 1px solid #172c04;
+        padding: 10px;
+        width: 90%;
+        border-radius: 16px;
+        background-color: #cbeccc;
+        font-size: 16px;
+        }
+
+        input[type=text],
+        input[type=password],
+        textarea {
+            border: 1px solid #172c04;
+            padding: 10px;
+            width: 90%;
+            border-bottom-right-radius: 1px;
+            border-top-right-radius: 1px;
+            border-top-left-radius: 16px;
+            border-bottom-left-radius: 16px;
+        
+        }
+
+        label {
+            padding-top: 10px !important;
+            display: block;
+        }
+
+        .boton {
+            border: 1px solid #20490d;
+            background-color: #b9e7ad;
+            color: #08310a;
+            padding: 10px;
+            font-size: 14px;
+            cursor: pointer;
+            text-decoration: none;
+            border-bottom-right-radius: 16px;
+            border-top-right-radius: 16px;
+            border-top-left-radius: 1px;
+            border-bottom-left-radius: 1px;
+        }
+
+        .botonform{
+            border: 1px solid #20490d;
+            background-color: #b9e7ad;
+            color: #08310a;
+            padding: 10px;
+            font-size: 14px;
+            cursor: pointer;
+            text-decoration: none;
+            border-radius: 10px;
+            margin-top: 10px;
+
+        }
+
+        .enlace-eliminar{
+            font-size: 20px;
+            
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container"> 
+        {% block content %}
+
+        {% endblock content %}
+    </div>
+</body>
+
+
+
+
+
+
+</html>

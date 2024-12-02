@@ -1,0 +1,25 @@
+{% extends 'base/principal.html' %}
+{% block content %}
+{% load static %}
+
+
+
+<h1 style="text-align: center;">Ingresar</h1>
+
+
+<div id="login">
+    <form method="post" class="formato-1">
+        {% csrf_token %}
+        <label> {{form.username.label}}</label>
+        {{form.username}}
+   
+        <label> {{form.password.label}}</label>
+        {{form.password}}
+
+        <input class="botonform" type="submit" value="Ingresar">
+    </form>
+</div>
+
+<p>No tienes tu cuenta? <a href="{% url 'registro' %}">Registrarse</a></p>
+
+{% endblock content %}

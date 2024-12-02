@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contenedor Borroso</title>
+    <style>
+        body {
+            background-image: url('/home/grego/Escritorio/PYTHON_PRAC/dia_16/mi_web/src/proyecto/login.svg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container-borroso {
+            width: 50%;
+            margin: 100px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1); /* Ligero fondo para hacer visible el efecto */
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px); /* Efecto borroso */
+            -webkit-backdrop-filter: blur(10px); /* Compatibilidad con Safari */
+        }
+
+        h1, p {
+            margin: 0 0 15px;
+            color: #fcf9f9;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container-borroso">
+        <h1>Título del Contenedor</h1>
+        <p>Ejemplo de un contenedor borroso. El contenido detrás del contenedor se verá desenfocado, creando un efecto de vidrio esmerilado.</p>
+    
+            <p>/* Cambiar colores de enlaces */
+        a {
+            color: #00ff00; /* Color del enlace normal */
+            text-decoration: none; /* Sin subrayado */
+        }</p>
+
+        <p>a:hover {
+            color: #ff0000; /* Color al pasar el mouse sobre el enlace */
+            text-decoration: underline; /* Subrayado al pasar el mouse */
+        }</p>
+
+        <p>a:visited {
+            color: #8888ff; /* Color del enlace visitado */
+        }</p>
+
+        <p>a:active {
+            color: #ffff00; /* Color del enlace cuando es clicado */
+        }</p>
+    </div>
+
+</body>
+</html>
+
